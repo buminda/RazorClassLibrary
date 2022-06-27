@@ -1,9 +1,33 @@
-﻿<h3>FeedbackComponent </h3>
+﻿@using Microsoft.AspNetCore.Components
+@using FeedbackApp.Shared.Models
+@*<h3>FeedbackComponent </h3>
 
 <h3> Star </h3>
 
-<h3> Comment </h3>
+<h3> Comment </h3>*@
+
+<h3>Emoji selection</h3>
+<EditForm Model="_emoji">
+    <InputRadioGroup @bind-Value="_emoji.EmojiOptions" >
+        @foreach (Enum value in Enum.GetValues(typeof(FeedbackEmoji.FeedbackEmojiEnum)))
+        {
+            <label>
+                <InputRadio class="selector" Value=@value id=@value/>
+                <label for="@value" class="@value options" />
+                <span class="ml-2 mr-2 option-name">@value.GetDisplayName()</span>
+            </label>
+        }
+    </InputRadioGroup>
+    <div>
+        <button type="submit" class="btn mt-3 main-bg-color" @onclick="OnSubmit">ConsoleLog result</button>
+    </div>
+</EditForm>
 
 @code {
+    private FeedbackEmoji _emoji = new FeedbackEmoji();
 
+    private void OnSubmit()
+    {
+        Console.WriteLine($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
+    }
 }

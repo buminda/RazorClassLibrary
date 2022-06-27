@@ -13,6 +13,14 @@
 
 	<ItemGroup>
 		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\js\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\FeedbackApp.Shared\FeedbackApp.Shared.csproj" />
 	</ItemGroup>	
 
 
