@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedbackApp.Client", "FeedbackApp.Client\FeedbackApp.Client.csproj", "{54F045A8-5884-4E8E-B201-25A7E30ED8BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedbackApp.Components", "FeedbackApp.Components\FeedbackApp.Components.csproj", "{29C0C8B2-97B8-449D-9410-E4D9A847ADEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54F045A8-5884-4E8E-B201-25A7E30ED8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F045A8-5884-4E8E-B201-25A7E30ED8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F045A8-5884-4E8E-B201-25A7E30ED8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F045A8-5884-4E8E-B201-25A7E30ED8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C0C8B2-97B8-449D-9410-E4D9A847ADEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C0C8B2-97B8-449D-9410-E4D9A847ADEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C0C8B2-97B8-449D-9410-E4D9A847ADEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C0C8B2-97B8-449D-9410-E4D9A847ADEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC305E57-647D-42E3-9110-E2E2861CC2F0}
+	EndGlobalSection
+EndGlobal
