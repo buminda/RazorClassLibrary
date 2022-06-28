@@ -139,8 +139,7 @@ html, body {
 }
 
 .FEEBACK01 {
-    /*background-image: url(../img/sentiment_very_dissatisfied_black_24dp.png);*/
-    background-image: url(../img/sm_1.jpg);
+    background-image: url(../img/sentiment_very_dissatisfied_black_24dp.png);    
 }
 
 .FEEBACK02 {
@@ -161,8 +160,7 @@ html, body {
 
 
 .selector:checked + .FEEBACK01 {
-    /*background-image: url(../img/sentiment_very_dissatisfied_blue_24dp.png);*/
-    background-image: url(../img/sm_2.jpg);
+    background-image: url(../img/sentiment_very_dissatisfied_blue_24dp.png);    
 }
 
 .selector:checked + .FEEBACK02 {
@@ -208,7 +206,7 @@ html, body {
 }
 
 .selector:checked + .FEEBACK01 {
-    /*border: solid 1px green;*/
+    border: solid 1px green;
     -webkit-filter: none;
     -moz-filter: none;
     filter: none;
@@ -237,7 +235,36 @@ html, body {
 }
 
 .selector:checked + .FEEBACK02 {
-    border: solid 1px red;
+    border: solid 1px green;
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+    -webkit-animation: selected 1s ease-in;
+    -moz-animation: selected 1s ease-in;
+    animation: selected 1s ease-in;
+}
+
+.selector:checked + .FEEBACK03 {
+    border: solid 1px green;
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+    -webkit-animation: selected 1s ease-in;
+    -moz-animation: selected 1s ease-in;
+    animation: selected 1s ease-in;
+}
+
+.selector:checked + .FEEBACK04 {
+    border: solid 1px green;
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+    -webkit-animation: selected 1s ease-in;
+    -moz-animation: selected 1s ease-in;
+    animation: selected 1s ease-in;
+}
+.selector:checked + .FEEBACK05 {
+    border: solid 1px green;
     -webkit-filter: none;
     -moz-filter: none;
     filter: none;

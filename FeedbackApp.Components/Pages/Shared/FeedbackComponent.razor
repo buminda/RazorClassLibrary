@@ -6,20 +6,26 @@
 
 <h3> Comment </h3>*@
 
-<h3>Emoji selection</h3>
+<h3>Rate your experience of completing the NCC</h3>
 <EditForm Model="_emoji">
     <InputRadioGroup @bind-Value="_emoji.EmojiOptions" >
         @foreach (Enum value in Enum.GetValues(typeof(FeedbackEmoji.FeedbackEmojiEnum)))
         {
-            <label>
+            <label style="margin-right:20px;">
                 <InputRadio class="selector" Value=@value id=@value/>
                 <label for="@value" class="@value options" />
+                <br/>
                 <span class="ml-2 mr-2 option-name">@value.GetDisplayName()</span>
             </label>
+
         }
     </InputRadioGroup>
     <div>
-        <button type="submit" class="btn mt-3 main-bg-color" @onclick="OnSubmit">ConsoleLog result</button>
+        <textarea id="txtid" name="txtname" rows="4" cols="50" maxlength="200">
+        </textarea>
+    </div>
+    <div>
+        <button type="submit" class="btn mt-3 main-bg-color" @onclick="OnSubmit">Send Feedback</button>
     </div>
 </EditForm>
 
@@ -28,6 +34,9 @@
 
     private void OnSubmit()
     {
-        Console.WriteLine($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
+        FeedbackDTO feedbackDTO = new FeedbackDTO();
+        //feedbackDTO.FeedbackId = _emoji.EmojiOptions.ToString().L
+        //Console.WriteLine($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
+        System.Diagnostics.Debug.Print($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
     }
 }
