@@ -1,14 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Components
-@using FeedbackApp.Shared.Models
-@*<h3>FeedbackComponent </h3>
+@using static FeedbackApp.Shared.Models.FeedbackModel
+@inject IFeedbackService _feedbackService
 
-<h3> Star </h3>
-
-<h3> Comment </h3>*@
 
 <h3>Rate your experience of completing the NCC</h3>
-<EditForm Model="_emoji">
-    <InputRadioGroup @bind-Value="_emoji.EmojiOptions" >
+<EditForm Model="feedbackModel">
+    <InputRadioGroup @bind-Value="feedbackModel.feedBackEmoji.EmojiOptions" >
         @foreach (Enum value in Enum.GetValues(typeof(FeedbackEmoji.FeedbackEmojiEnum)))
         {
             <label style="margin-right:20px;">
@@ -21,7 +18,7 @@
         }
     </InputRadioGroup>
     <div>
-        <textarea id="txtid" name="txtname" rows="4" cols="50" maxlength="200">
+        <textarea id="txtid" name="txtname" rows="4" cols="50" maxlength="200" @bind=feedbackModel.Feedback >
         </textarea>
     </div>
     <div>
@@ -30,13 +27,16 @@
 </EditForm>
 
 @code {
-    private FeedbackEmoji _emoji = new FeedbackEmoji();
+
+    private FeedbackModel feedbackModel = new FeedbackModel();
 
     private void OnSubmit()
-    {
-        FeedbackDTO feedbackDTO = new FeedbackDTO();
-        //feedbackDTO.FeedbackId = _emoji.EmojiOptions.ToString().L
-        //Console.WriteLine($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
-        System.Diagnostics.Debug.Print($"Model EmojiOptions: {_emoji.EmojiOptions.ToString()}");
+    {        
+        System.Diagnostics.Debug.Print($"Model EmojiOptions: {feedbackModel.feedBackEmoji.EmojiOptions.ToString()}");
+        System.Diagnostics.Debug.Print($"Model EmojiOptions: {feedbackModel.Feedback }");
+        FeedbackData feedbackData = new FeedbackData();
+        feedbackData.FeedbackId = feedbackModel.FeedbackId;
+        feedbackData.Feedback = feedbackModel.Feedback;
+        _feedbackService.SubmitFeedbackSync(feedbackData);
     }
 }

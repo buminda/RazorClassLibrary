@@ -122,3 +122,8 @@ FeedbackApp.Components/bin/Debug/net6.0/FeedbackApp.Components.pdb
 .vs/FeedbackApp/v17/.suo
 .vs/ProjectEvaluation/feedbackapp.metadata.v2
 .vs/ProjectEvaluation/feedbackapp.projects.v2
+/.vs/FeedbackApp/FileContentIndex
+/FeedbackApp.Client/bin/Debug/net6.0
+/FeedbackApp.Components/bin/Debug/net6.0
+/FeedbackApp.Components/obj/Debug/net6.0
+/FeedbackApp.Shared/obj/Debug/net6.0
