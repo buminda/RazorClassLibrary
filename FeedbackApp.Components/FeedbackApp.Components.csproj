@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,6 +6,67 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Shared\FeedbackComponent.razor.css" />
+    <None Remove="Pages\Shared\img\sentiment_dissatisfied_black_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_dissatisfied_blue_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_neutral_black_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_neutral_blue_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_satisfied_black_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_satisfied_blue_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_very_dissatisfied_black_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_very_dissatisfied_blue_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_very_satisfied_black_24dp.png" />
+    <None Remove="Pages\Shared\img\sentiment_very_satisfied_blue_24dp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Shared\FeedbackComponent.razor.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_dissatisfied_black_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_dissatisfied_blue_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_neutral_black_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_neutral_blue_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_satisfied_black_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_satisfied_blue_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_very_dissatisfied_black_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_very_dissatisfied_blue_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_very_satisfied_black_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Pages\Shared\img\sentiment_very_satisfied_blue_24dp.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
